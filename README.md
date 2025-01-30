@@ -164,13 +164,5 @@ wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --en
 
 ---
 
-## 🏁 7. Conclusion
-
-Ce rapport met en évidence plusieurs vulnérabilités sur la machine **Blogger**, notamment un WordPress obsolète avec des plugins vulnérables. Des mesures correctives doivent être appliquées rapidement pour limiter les risques d'attaques.
-
----
-
 ## 📌 Annexes
-- Captures d’écran des résultats des scans
-- Détails des commandes exécutées
-- Liste complète des vulnérabilités détectées
+
