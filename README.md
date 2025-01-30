@@ -47,7 +47,7 @@ L'objectif de ce rapport est d'identifier et d'exploiter les vulnérabilités de
 
 ### 🌍 Informations sur l'Environnement
 - **IP cible :** `192.168.1.4`
-- **IP de la machine d'attaque :** `192.168.1.X`
+- **IP de la machine d'attaque :** `192.168.1.157`
 - **Outils utilisés :** `netdiscover`, `nmap`, `dirb`, `wpscan`
 
 ---
