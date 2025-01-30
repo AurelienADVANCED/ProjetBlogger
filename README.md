@@ -72,7 +72,6 @@ Pour faciliter l’accès, un alias `blogger.thm` a été ajouté dans le fichie
 
 echo "192.168.1.4 blogger.thm" | sudo tee -a /etc/hosts
 
-
 ---
 
 ## 🔥 4. Scan de Vulnérabilités WordPress
