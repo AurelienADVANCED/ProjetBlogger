@@ -358,18 +358,18 @@ Ces mesures, combinées à une vigilance continue et à des pratiques de sécuri
 
 Au cours de ce test d’intrusion, nous avons identifié et exploité plusieurs failles de sécurité dans la machine **Icecream**. En résumé, nous avons pu :
 
-1. Découvrir et explorer des services ouverts, notamment via SMB.
-2. Obtenir un accès initial en utilisant les partages SMB avec des droits en écriture.
-3. Déployer un Web Shell pour exécuter des commandes à distance.
-4. Élever nos privilèges jusqu’au compte root en exploitant une mauvaise configuration de l’outil **ums2net**.
+Découvrir et explorer des services ouverts, notamment via SMB.  
+Obtenir un accès initial en utilisant les partages SMB avec des droits en écriture.  
+Déployer un Web Shell pour exécuter des commandes à distance.  
+Élever nos privilèges jusqu’au compte root en exploitant une mauvaise configuration de l’outil **ums2net**.
 
 Ces failles démontrent l’importance de maintenir une infrastructure correctement sécurisée. À chaque étape, des correctifs et des recommandations ont été proposés pour limiter les risques futurs.
 
-**Points essentiels pour l’entreprise :**
-- Supprimer ou sécuriser les services inutilisés.
-- Réviser les permissions sur les fichiers critiques.
-- Mettre à jour régulièrement les outils et dépendances.
-- Implémenter des pratiques de surveillance et de gestion des journaux.
+**Points essentiels pour l’entreprise :**  
+Supprimer ou sécuriser les services inutilisés.  
+Réviser les permissions sur les fichiers critiques.  
+Mettre à jour régulièrement les outils et dépendances.  
+Implémenter des pratiques de surveillance et de gestion des journaux.
 
 **Prochaine étape :** appliquer les correctifs proposés et effectuer des audits de sécurité réguliers afin de prévenir de futures compromissions.
 
