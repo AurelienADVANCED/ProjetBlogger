@@ -2,18 +2,19 @@
 
 ## 📖 Sommaire
 
-1. 📝 Introduction  
-2. 🔍 Découverte du Réseau  
-3. 🚀 Analyse des Ports et Services  
-4. 🌐 Exploration du Site Web  
-5. 🔥 Scan de Vulnérabilités WordPress  
-6. 🔴 Vulnérabilités Critiques  
-7. ⚠️ Vulnérabilités Élevées  
-8. 🟠 Vulnérabilités Moyennes  
-9. 🟡 Vulnérabilités Faibles  
-10. 🚀 Exploitation de la Faille Critique wpDiscuz  
-11. ⚠️ Exploitation Potentielle et Risques  
-12. 🛡️ Recommandations de Sécurité  
+1. [📝 Introduction](#-introduction)  
+2. [🔍 Découverte du Réseau](#-1-découverte-du-réseau)  
+3. [🚀 Analyse des Ports et Services](#-2-analyse-des-ports-et-services)  
+4. [🌐 Exploration du Site Web](#-3-exploration-du-site-web)  
+5. [🔥 Scan de Vulnérabilités WordPress](#-4-scan-de-vulnérabilités-wordpress)  
+6. [🔴 Vulnérabilités Critiques](#-vulnerabilités-critiques)  
+7. [⚠️ Vulnérabilités Élevées](#-vulnerabilités-élevées)  
+8. [🟠 Vulnérabilités Moyennes](#-vulnerabilités-moyennes)  
+9. [🟡 Vulnérabilités Faibles](#-vulnerabilités-faibles)  
+10. [🚀 Exploitation de la Faille Critique wpDiscuz](#-exploitation-de-la-faille-critique-wpdiscuz)  
+11. [⚠️ Exploitation Potentielle et Risques](#-exploitation-potentielle-et-risques)  
+12. [🛡️ Recommandations de Sécurité](#-recommendations-de-sécurité)  
+13. [🔚 Conclusion](#-conclusion)  
 
 ---
 
