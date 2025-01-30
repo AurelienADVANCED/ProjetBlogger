@@ -70,7 +70,7 @@ Une machine avec l’IP `192.168.1.4` a été détectée.
 ## 🚀 2. Analyse des Ports et Services
 
 ### 🛠 Scan Nmap
-Un scan approfondi a été réalisé avec `nmap` pour identifier les services exposés et leurs versions :
+Après la découverte des machines actives, un scan détaillé avec `nmap` a été réalisé pour identifier les ports ouverts et les services associés sur l'IP cible.
 
 ```bash
 nmap -sS -sC -sV -A -O -vvv 192.168.1.4
