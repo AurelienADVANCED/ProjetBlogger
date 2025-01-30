@@ -32,7 +32,6 @@ Un scan approfondi a été réalisé avec `nmap` pour identifier les services ex
 
 nmap -sS -sC -sV -A -O -vvv 192.168.1.4
 
-
 **Résultats :**
 | Port | Service | Version |
 |------|---------|---------|
@@ -45,12 +44,17 @@ On constate que **deux ports sont ouverts** :
 
 Le **port 80** héberge un service web accessible via un navigateur.
 
+![image7](https://github.com/user-attachments/assets/4d79c829-77d3-4597-bf01-ed05cb9aa17d)
+![image8](https://github.com/user-attachments/assets/0e9aa5c5-e8ad-42e2-920d-c9acb4b900da)
+
 ---
 
 ## 🌐 3. Exploration du Site Web
 
 ### 🖥 Accès au Site Web
 En entrant l'adresse `http://192.168.1.4` dans le navigateur, une page web s'affiche.
+
+![image](https://github.com/user-attachments/assets/7f8b1882-1a00-4b75-b9a2-535b2619cf0d)
 
 ### 📂 Recherche de Contenus Cachés avec Dirb
 Un scan avec `dirb` a été effectué pour découvrir des répertoires cachés :
@@ -60,6 +64,8 @@ dirb http://192.168.1.4
 **Résultats :**
 - **Répertoire découvert :** `/assets/fonts/blog`
 - Ce répertoire contient une instance **WordPress**.
+
+![image10](https://github.com/user-attachments/assets/ef33f844-e003-4e48-b7d7-a1c3a7b7dc2c)
 
 ### 🛠 Ajout d'une Entrée dans le Fichier Hosts
 Pour faciliter l’accès, un alias `blogger.thm` a été ajouté dans le fichier `/etc/hosts` :
