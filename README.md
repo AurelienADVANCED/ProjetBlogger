@@ -355,7 +355,7 @@ Audits de sécurité réguliers : Des audits réguliers et des tests de pénétr
 
 Ces mesures, combinées à une vigilance continue et à des pratiques de sécurité informatique robustes, peuvent aider à sécuriser significativement le système contre les attaques futures.
 
-## 🔚 Conclusion
+## 🔚 8. Conclusion
 
 Au cours de ce test d’intrusion, nous avons identifié et exploité plusieurs failles de sécurité dans la machine **Icecream**. En résumé, nous avons pu :
 
