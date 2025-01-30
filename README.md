@@ -167,7 +167,12 @@ wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --en
 
 ---
 
-## 🟡 **Vulnérabilités Faibles**
+## 🟡 Vulnérabilités Faibles
+
+Bien que de faible impact, ces vulnérabilités pourraient encore être utilisées en combinaison avec d'autres exploits pour mener des attaques plus complexes.
+
+### **Détails des vulnérabilités faibles identifiées** :
+
 | Plugin/Vulnérabilité | Description |
 |----------------------|-------------|
 | **WordPress Core** | XSS stocké via des liens spécifiques (CVE-2019-20042) |
@@ -175,6 +180,17 @@ wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --en
 | **WordPress Core** | Vulnérabilité XSS sur Apache via l'upload de fichiers (CVE-2018-20149) |
 | **WordPress Core** | Vulnérabilité XSS dans l'assainissement des URLs (CVE-2019-16222) |
 | **Plugin Akismet** | Version obsolète avec failles connues |
+
+**Explication des risques et des impacts** :
+- **XSS stocké** : Similaire aux vulnérabilités moyennes, le XSS stocké dans ces contextes pourrait être utilisé pour des attaques ciblées.
+- **Problèmes d'indexation** : Peut permettre à des attaquants de découvrir des informations sur les utilisateurs pendant les processus d'activation.
+- **Vulnérabilité XSS sur Apache** : Spécifique à l'environnement serveur, cette faille pourrait permettre l'exécution de scripts dans des contextes inattendus.
+- **Assainissement des URLs** : Manquements dans l'assainissement peuvent permettre des injections via des URLs mal formées.
+
+### **Recommandations pour le patching** :
+- **Mise à jour des plugins et du noyau** : Comme pour les autres niveaux de vulnérabilité, la mise à jour est cruciale.
+- **Renforcement de l'assainissement des entrées** : Implémenter des contrôles stricts sur les données entrantes, spécialement dans les URLs et les liens.
+- **Audit des paramètres serveur** : Examiner et ajuster les configurations du serveur pour renforcer la sécurité contre les XSS.
 
 ---
 
@@ -264,21 +280,27 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 ## ⚠️ 6. Exploitation Potentielle et Risques
 
 ### 🔑 Vulnérabilités Identifiées
-1. **WordPress obsolète** : Potentiel XSS et SQL Injection.
-2. **Plugins vulnérables** : Certains plugins non mis à jour contiennent des failles exploitables.
-3. **Exposition du service SSH** : Potentiellement bruteforcable.
+
+1. **WordPress obsolète** : Des versions antérieures de WordPress sont souvent vulnérables à des attaques de type XSS et injection SQL.
+2. **Plugins vulnérables** : Des plugins non mis à jour peuvent contenir des failles exploitées pour obtenir un accès non autorisé ou exécuter du code malveillant.
+3. **Exposition du service SSH** : Le service SSH, s'il est mal configuré ou si les mots de passe sont faibles, peut être bruteforcé ou exploité pour un accès non autorisé.
 
 ### 🚨 Risques et Conséquences
-- **Prise de contrôle de l’instance WordPress**
-- **Éventuel accès aux fichiers sensibles**
-- **Possibilité d’escalade de privilèges via un plugin vulnérable**
+
+- **Prise de contrôle de l’instance WordPress** : Un attaquant peut obtenir un contrôle total sur le site WordPress, modifiant le contenu ou redirigeant les visiteurs vers des sites malveillants.
+- **Accès aux fichiers sensibles** : Les fichiers de configuration, les bases de données et d'autres données sensibles peuvent être accédés, compromettant la confidentialité des informations.
+- **Possibilité d’escalade de privilèges** : À partir d'un accès initial limité, un attaquant pourrait escalader ses privilèges jusqu'à obtenir un contrôle total sur le système d'exploitation sous-jacent.
 
 ---
 
 ## 🛡️ 7. Recommandations de Sécurité
 
-1. **Mettre à jour WordPress et ses plugins** pour combler les failles connues.
-2. **Restreindre l'accès au SSH** en limitant les connexions aux adresses IP de confiance.
-3. **Désactiver les plugins inutilisés** et renforcer la configuration des permissions.
-4. **Mettre en place un pare-feu (WAF)** pour filtrer les requêtes malveillantes.
-5. **Auditer régulièrement la sécurité du serveur** pour détecter d’éventuelles nouvelles failles.
+Pour remédier aux vulnérabilités identifiées et améliorer la sécurité générale du système, les actions suivantes sont recommandées :
+
+1. **Mise à jour immédiate de WordPress et de tous les plugins et thèmes** : C'est la mesure la plus efficace pour corriger les failles de sécurité connues.
+2. **Restriction de l'accès au SSH** : Limiter les accès SSH aux adresses IP de confiance et utiliser l'authentification par clé plutôt que par mot de passe.
+3. **Désactivation des plugins inutilisés** : Les plugins qui ne sont pas nécessaires doivent être désactivés pour réduire la surface d'attaque.
+4. **Mise en place d'un pare-feu d'applications web (WAF)** : Un WAF peut aider à bloquer les tentatives d'attaques XSS, d'injection SQL, et d'autres attaques web courantes.
+5. **Audits de sécurité réguliers** : Des audits réguliers et des tests de pénétration peuvent aider à identifier et corriger les nouvelles vulnérabilités avant qu'elles ne soient exploitées.
+
+Ces mesures, combinées à une vigilance continue et à des pratiques de sécurité informatique robustes, peuvent aider à sécuriser significativement le système contre les attaques futures.
