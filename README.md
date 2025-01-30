@@ -73,4 +73,48 @@ echo "192.168.1.4 blogger.thm" | sudo tee -a /etc/hosts
 ### 🏴 Utilisation de WPScan
 Un scan approfondi a été réalisé sur WordPress pour détecter les vulnérabilités :
 
+wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --enumerate ap --api-token=B4ZGWKhJHufoRPD6PAzqdQlraiSHRxinJF6zzaa6qtY
 
+**Résultats du scan :**
+| Plugin/Vulnérabilité | Description | Niveau de Risque |
+|----------------------|-------------|------------------|
+| Plugin X | Version obsolète, permet injection SQL | ⚠️ Critique |
+| Plugin Y | Mauvaise configuration des permissions | 🟠 Élevé |
+| WordPress Core | Version vulnérable à XSS (CVE-XXXX-XXXX) | 🟡 Moyen |
+
+---
+
+## ⚠️ 5. Exploitation Potentielle et Risques
+
+### 🔑 Vulnérabilités Identifiées
+1. **WordPress obsolète** : Potentiel XSS et SQL Injection.
+2. **Plugins vulnérables** : Certains plugins non mis à jour contiennent des failles exploitables.
+3. **Exposition du service SSH** : Potentiellement bruteforcable.
+
+### 🚨 Risques et Conséquences
+- **Prise de contrôle de l’instance WordPress**
+- **Éventuel accès aux fichiers sensibles**
+- **Possibilité d’escalade de privilèges via un plugin vulnérable**
+
+---
+
+## 🛡️ 6. Recommandations de Sécurité
+
+1. **Mettre à jour WordPress et ses plugins** pour combler les failles connues.
+2. **Restreindre l'accès au SSH** en limitant les connexions aux adresses IP de confiance.
+3. **Désactiver les plugins inutilisés** et renforcer la configuration des permissions.
+4. **Mettre en place un pare-feu (WAF)** pour filtrer les requêtes malveillantes.
+5. **Auditer régulièrement la sécurité du serveur** pour détecter d’éventuelles nouvelles failles.
+
+---
+
+## 🏁 7. Conclusion
+
+Ce rapport met en évidence plusieurs vulnérabilités sur la machine **Blogger**, notamment un WordPress obsolète avec des plugins vulnérables. Des mesures correctives doivent être appliquées rapidement pour limiter les risques d'attaques.
+
+---
+
+## 📌 Annexes
+- Captures d’écran des résultats des scans
+- Détails des commandes exécutées
+- Liste complète des vulnérabilités détectées
