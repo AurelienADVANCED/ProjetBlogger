@@ -50,6 +50,11 @@ L'objectif de ce rapport est d'identifier et d'exploiter les vulnérabilités de
 - **IP de la machine d'attaque :** `192.168.1.157`
 - **Outils utilisés :** `netdiscover`, `nmap`, `dirb`, `wpscan`
 
+### 🖼️ Schéma de l’Infrastructure
+Un aperçu de l’infrastructure actuelle est illustré ci-dessous :
+
+![image](https://github.com/user-attachments/assets/ee415b14-24e6-4877-9e9a-322167c8b204)
+
 ---
 
 ## 🔍 1. Découverte du Réseau
