@@ -142,6 +142,26 @@ wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --en
 | **Plugin wpDiscuz** | Téléchargement de fichiers arbitraires non authentifié (CVE-2020-24186) |
 | **Plugin wpDiscuz** | Injection SQL non authentifiée (CVE-2023-3869) |
 
+## Explication des Risques et des Impacts
+
+### Exécution de Code à Distance
+Permet à un attaquant d'exécuter du code arbitraire sur le serveur, potentiellement prenant le contrôle total de celui-ci.
+
+### Problèmes de Tokens de Réinitialisation
+Un attaquant pourrait intercepter ou réutiliser un token pour changer le mot de passe d'un utilisateur sans autorisation.
+
+### Téléchargement de Fichiers Arbitraires
+Cette vulnérabilité permet à des fichiers malveillants d'être téléchargés sur le serveur, facilitant l'exécution de code malveillant.
+
+### Injection SQL
+Permet à un attaquant d'injecter des requêtes SQL malveillantes qui peuvent lire, modifier, ou supprimer des données dans la base de données.
+
+## Recommandations pour le Patching
+
+- **Mise à jour immédiate de WordPress et de tous les plugins** : Installer les dernières versions pour corriger les vulnérabilités connues.
+- **Restriction des fichiers uploadables** : Configurer le serveur pour limiter les types de fichiers pouvant être uploadés et exécutés.
+- **Utilisation de préparations SQL** : S'assurer que toutes les requêtes à la base de données utilisent des méthodes qui préviennent l'injection SQL, telles que les requêtes préparées.
+
 ---
 
 ## ⚠️ **Vulnérabilités Élevées**
@@ -154,6 +174,27 @@ wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --en
 | **Plugin wpDiscuz** | Injection de contenu non authentifiée (CVE-2023-46310) |
 | **Plugin wpDiscuz** | Faille d'autorisation permettant modification de contenu (CVE-2023-3998) |
 
+
+## Explication des Risques et des Impacts
+
+### Injection XSS
+Permet à un attaquant d'injecter du script malveillant qui peut être exécuté dans le navigateur de l'utilisateur, volant des sessions ou des données.
+
+### Suppression Arbitraire de Fichiers
+Un attaquant peut supprimer des fichiers cruciaux du serveur, potentiellement causant un déni de service.
+
+### Contournement des Permissions
+Permet à des utilisateurs non autorisés d'effectuer des actions normalement réservées aux administrateurs, compromettant ainsi la sécurité du site.
+
+### Injection de Contenu
+Un attaquant pourrait modifier le contenu du site sans être authentifié, affectant l'intégrité du site.
+
+## Recommandations pour le Patching
+
+- **Mise à jour de WordPress et des plugins** : Assurez-vous que toutes les composantes du site sont à jour avec les dernières sécurités.
+- **Renforcement des politiques de contenu** : Utiliser des headers de sécurité comme Content-Security-Policy pour prévenir les XSS.
+- **Audit des permissions** : Réviser et restreindre les permissions pour s'assurer que seuls les utilisateurs nécessaires ont accès à des fonctionnalités sensibles.
+
 ---
 
 ## 🟠 **Vulnérabilités Moyennes**
@@ -164,6 +205,30 @@ wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --en
 | **WordPress Core** | Empoisonnement du cache des requêtes JSON (CVE-2019-17673) |
 | **Plugin wpDiscuz** | XSS stocké via la soumission de commentaires (CVE-2023-47185) |
 | **Plugin wpDiscuz** | Manque d'autorisation dans les actions AJAX (CVE-2023-45760) |
+
+## Explication des Risques et des Impacts
+
+### Accès non authentifié
+Un attaquant peut accéder à des informations normalement non accessibles sans authentification, potentiellement exposant des données sensibles.
+
+### Injection d'objets PHP
+Cette vulnérabilité permet à un attaquant d'exécuter du code arbitraire en manipulant les métadonnées des objets.
+
+### Empoisonnement du cache
+Peut être utilisé pour servir du contenu malveillant à d'autres utilisateurs, exploitant la fonctionnalité de cache.
+
+### XSS stocké
+Permet à l'attaquant de stocker un script malveillant sur le site, qui sera exécuté à chaque fois que la page affectée est visitée.
+
+### Manque d'autorisation AJAX
+Les actions AJAX sans vérifications d'autorisation appropriées peuvent être exploitées pour effectuer des actions non autorisées.
+
+## Recommandations pour le Patching
+
+- **Contrôle d'accès renforcé** : S'assurer que toutes les informations sensibles nécessitent une authentification appropriée.
+- **Validation et assainissement des entrées** : S'assurer que toutes les entrées, y compris les métadonnées, sont correctement validées et assainies pour prévenir l'injection.
+- **Sécurisation du cache** : Configurer correctement le cache pour prévenir l'empoisonnement et assurer que le contenu est servi uniquement aux utilisateurs autorisés.
+- **Audit des scripts AJAX** : Revoir toutes les fonctions AJAX pour s'assurer qu'elles implémentent des contrôles d'autorisation adéquats.
 
 ---
 
