@@ -2,41 +2,18 @@
 
 ## 📖 Sommaire
 
-1. [📝 Introduction](#-introduction)
-   - 🎯 Objectif
-   - 🌍 Informations sur l'Environnement
-
-2. [🔍 Découverte du Réseau](#-1-découverte-du-réseau)
-   - 🔎 Scan du Réseau Local
-
-3. [🚀 Analyse des Ports et Services](#-2-analyse-des-ports-et-services)
-   - 🛠 Scan Nmap
-
-4. [🌐 Exploration du Site Web](#-3-exploration-du-site-web)
-   - 🖥 Accès au Site Web
-   - 📂 Recherche de Contenus Cachés avec Dirb
-   - 🛠 Ajout d'une Entrée dans le Fichier Hosts
-
-5. [🔥 Scan de Vulnérabilités WordPress](#-4-scan-de-vulnérabilités-wordpress)
-   - 🏴 Utilisation de WPScan
-
-6. [🔴 Vulnérabilités Critiques](#-vulnérabilités-critiques)
-7. [⚠️ Vulnérabilités Élevées](#-7-vulnerabilites-elevees)
-8. [🟠 Vulnérabilités Moyennes](#-vulnérabilités-moyennes)
-9. [🟡 Vulnérabilités Faibles](#-vulnérabilités-faibles)
-
-10. [🚀 Exploitation de la Faille Critique wpDiscuz](#-5-exploitation-de-la-faille-critique-wpdiscuz)
-    - 🎯 Exploitation de la Vulnérabilité d’Upload de Fichier
-    - 📂 Étape 1 : Création du Fichier Malveillant
-    - ⏳ Étape 2 : Lancement d’une Écoute sur Kali
-    - 📤 Étape 3 : Upload du Fichier Malveillant
-    - 🎉 Étape 4 : Prise de Contrôle
-
-11. [⚠️ Exploitation Potentielle et Risques](#-11-exploitation-potentielle-et-risques)
-    - 🔑 Vulnérabilités Identifiées
-    - 🚨 Risques et Conséquences
-
-12. [🛡️ Recommandations de Sécurité](#-12-recommandations-de-securite)
+1. 📝 Introduction  
+2. 🔍 Découverte du Réseau  
+3. 🚀 Analyse des Ports et Services  
+4. 🌐 Exploration du Site Web  
+5. 🔥 Scan de Vulnérabilités WordPress  
+6. 🔴 Vulnérabilités Critiques  
+7. ⚠️ Vulnérabilités Élevées  
+8. 🟠 Vulnérabilités Moyennes  
+9. 🟡 Vulnérabilités Faibles  
+10. 🚀 Exploitation de la Faille Critique wpDiscuz  
+11. ⚠️ Exploitation Potentielle et Risques  
+12. 🛡️ Recommandations de Sécurité  
 
 ---
 
