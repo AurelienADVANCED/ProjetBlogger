@@ -69,48 +69,74 @@ echo "192.168.1.4 blogger.thm" | sudo tee -a /etc/hosts
 ---
 
 ## 🔥 4. Scan de Vulnérabilités WordPress
+
 ### 🏴 Utilisation de WPScan
 Un scan approfondi a été réalisé sur WordPress pour détecter les vulnérabilités :
 
 **Commande exécutée :**
 wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --enumerate ap --api-token=B4ZGWKhJHufoRPD6PAzqdQlraiSHRxinJF6zzaa6qtY
 
-**Résultats du scan :**
-| Plugin/Vulnérabilité | Description | Niveau de Risque |
-|----------------------|-------------|------------------|
-| **WordPress Core** | Version vulnérable à l'exécution de code à distance (CVE-2019-8942, CVE-2019-8943) | 🔴 Critique |
-| **WordPress Core** | Problème avec les tokens de réinitialisation de mot de passe (CVE-2020-11027) | 🔴 Critique |
-| **WordPress Core** | Injection XSS via l'upload de fichiers (CVE-2020-11026) | ⚠️ Élevé |
-| **WordPress Core** | Suppression arbitraire de fichiers (CVE-2018-20147) | ⚠️ Élevé |
-| **WordPress Core** | Injection XSS via l'éditeur de blocs (CVE-2019-16781, CVE-2019-16780) | ⚠️ Élevé |
-| **WordPress Core** | Contournement des permissions administratives (CVE-2019-17675) | ⚠️ Élevé |
-| **WordPress Core** | Accès non authentifié aux brouillons et contenus privés (CVE-2019-17671) | 🟠 Moyen |
-| **WordPress Core** | Injection d'objets PHP via métadonnées (CVE-2018-20148) | 🟠 Moyen |
-| **WordPress Core** | Empoisonnement du cache des requêtes JSON (CVE-2019-17673) | 🟠 Moyen |
-| **WordPress Core** | XSS stocké via des liens spécifiques (CVE-2019-20042) | 🟡 Faible |
-| **Plugin wpDiscuz** | Téléchargement de fichiers arbitraires non authentifié (CVE-2020-24186) | 🔴 Critique |
-| **Plugin wpDiscuz** | Injection SQL non authentifiée (CVE-2023-3869) | 🔴 Critique |
-| **Plugin wpDiscuz** | Injection de contenu non authentifiée (CVE-2023-46310) | ⚠️ Élevé |
-| **Plugin wpDiscuz** | Faille d'autorisation permettant modification de contenu (CVE-2023-3998) | ⚠️ Élevé |
-| **Plugin wpDiscuz** | XSS stocké via la soumission de commentaires (CVE-2023-47185) | 🟠 Moyen |
-| **Plugin wpDiscuz** | Manque d'autorisation dans les actions AJAX (CVE-2023-45760) | 🟠 Moyen |
-| **Plugin Akismet** | Version obsolète avec failles connues | 🟡 Faible |
-| **WordPress Core** | Problème d'indexation des écrans d'activation utilisateurs (CVE-2018-20151) | 🟡 Faible |
-| **WordPress Core** | Vulnérabilité XSS sur Apache via l'upload de fichiers (CVE-2018-20149) | 🟡 Faible |
-| **WordPress Core** | Vulnérabilité XSS dans l'assainissement des URLs (CVE-2019-16222) | 🟡 Faible |
+---
 
-🔴 **Critique** : Peut compromettre entièrement le site.
-⚠️ **Élevé** : Risque de compromission sévère.
-🟠 **Moyen** : Accès partiel aux données ou altération de contenu.
-🟡 **Faible** : Moins d'impact, souvent exploitable avec des privilèges existants.
+## 🔴 **Vulnérabilités Critiques**
+| Plugin/Vulnérabilité | Description |
+|----------------------|-------------|
+| **WordPress Core** | Exécution de code à distance (CVE-2019-8942, CVE-2019-8943) |
+| **WordPress Core** | Problème avec les tokens de réinitialisation de mot de passe (CVE-2020-11027) |
+| **Plugin wpDiscuz** | Téléchargement de fichiers arbitraires non authentifié (CVE-2020-24186) |
+| **Plugin wpDiscuz** | Injection SQL non authentifiée (CVE-2023-3869) |
 
-🚀 **Action recommandée** :
+---
+
+## ⚠️ **Vulnérabilités Élevées**
+| Plugin/Vulnérabilité | Description |
+|----------------------|-------------|
+| **WordPress Core** | Injection XSS via l'upload de fichiers (CVE-2020-11026) |
+| **WordPress Core** | Suppression arbitraire de fichiers (CVE-2018-20147) |
+| **WordPress Core** | Injection XSS via l'éditeur de blocs (CVE-2019-16781, CVE-2019-16780) |
+| **WordPress Core** | Contournement des permissions administratives (CVE-2019-17675) |
+| **Plugin wpDiscuz** | Injection de contenu non authentifiée (CVE-2023-46310) |
+| **Plugin wpDiscuz** | Faille d'autorisation permettant modification de contenu (CVE-2023-3998) |
+
+---
+
+## 🟠 **Vulnérabilités Moyennes**
+| Plugin/Vulnérabilité | Description |
+|----------------------|-------------|
+| **WordPress Core** | Accès non authentifié aux brouillons et contenus privés (CVE-2019-17671) |
+| **WordPress Core** | Injection d'objets PHP via métadonnées (CVE-2018-20148) |
+| **WordPress Core** | Empoisonnement du cache des requêtes JSON (CVE-2019-17673) |
+| **Plugin wpDiscuz** | XSS stocké via la soumission de commentaires (CVE-2023-47185) |
+| **Plugin wpDiscuz** | Manque d'autorisation dans les actions AJAX (CVE-2023-45760) |
+
+---
+
+## 🟡 **Vulnérabilités Faibles**
+| Plugin/Vulnérabilité | Description |
+|----------------------|-------------|
+| **WordPress Core** | XSS stocké via des liens spécifiques (CVE-2019-20042) |
+| **WordPress Core** | Problème d'indexation des écrans d'activation utilisateurs (CVE-2018-20151) |
+| **WordPress Core** | Vulnérabilité XSS sur Apache via l'upload de fichiers (CVE-2018-20149) |
+| **WordPress Core** | Vulnérabilité XSS dans l'assainissement des URLs (CVE-2019-16222) |
+| **Plugin Akismet** | Version obsolète avec failles connues |
+
+---
+
+## **Légende des niveaux de risque**
+🔴 **Critique** : Peut compromettre entièrement le site.  
+⚠️ **Élevé** : Risque de compromission sévère.  
+🟠 **Moyen** : Accès partiel aux données ou altération de contenu.  
+🟡 **Faible** : Moins d'impact, souvent exploitable avec des privilèges existants.  
+
+---
+
+🚀 **Actions recommandées :**
 - **Mettre à jour immédiatement** WordPress et ses plugins.
 - **Désactiver XML-RPC** pour éviter les attaques externes.
 - **Restreindre les permissions des fichiers et dossiers sensibles.**
 - **Appliquer un pare-feu WAF** pour bloquer les attaques XSS et injections SQL.
 
-📌 **Prochaine étape** : Effectuer un audit approfondi du serveur et des logs pour détecter toute compromission.
+📌 **Prochaine étape :** Effectuer un audit approfondi du serveur et des logs pour détecter toute compromission.
 
 ---
 
