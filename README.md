@@ -168,7 +168,3 @@ wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --en
 4. **Mettre en place un pare-feu (WAF)** pour filtrer les requêtes malveillantes.
 5. **Auditer régulièrement la sécurité du serveur** pour détecter d’éventuelles nouvelles failles.
 
----
-
-## 📌 Annexes
-
