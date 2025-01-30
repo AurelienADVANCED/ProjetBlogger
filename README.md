@@ -19,8 +19,9 @@ Un scan du réseau a été réalisé pour détecter les machines actives à l'ai
 
 sudo netdiscover -r 192.168.1.0/24
 
-
 Une machine avec l’IP `192.168.1.4` a été détectée.
+
+![image](https://github.com/user-attachments/assets/b6b1c037-3b74-4804-8232-aacc448f5422)
 
 ---
 
