@@ -131,6 +131,7 @@ Un scan approfondi a été réalisé sur WordPress pour détecter les vulnérabi
 ```bash
 wpscan --url http://192.168.1.4/assets/fonts/blog --plugins-detection mixed --enumerate ap --api-token=B4ZGWKhJHufoRPD6PAzqdQlraiSHRxinJF6zzaa6qtY
 ```
+Résultats : Des vulnérabilités allant de critiques à faibles ont été détectées. Ces vulnérabilités sont détaillées dans les sections suivantes du rapport, avec des recommandations pour les patcher.
 
 ---
 
