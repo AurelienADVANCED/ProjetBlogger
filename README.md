@@ -141,9 +141,9 @@ Permet à un attaquant d'injecter des requêtes SQL malveillantes qui peuvent li
 
 ## Recommandations pour le Patching
 
-- **Mise à jour immédiate de WordPress et de tous les plugins** : Installer les dernières versions pour corriger les vulnérabilités connues.
-- **Restriction des fichiers uploadables** : Configurer le serveur pour limiter les types de fichiers pouvant être uploadés et exécutés.
-- **Utilisation de préparations SQL** : S'assurer que toutes les requêtes à la base de données utilisent des méthodes qui préviennent l'injection SQL, telles que les requêtes préparées.
+Mise à jour immédiate de WordPress et de tous les plugins : Installer les dernières versions pour corriger les vulnérabilités connues.  
+Restriction des fichiers uploadables : Configurer le serveur pour limiter les types de fichiers pouvant être uploadés et exécutés.  
+Utilisation de préparations SQL : S'assurer que toutes les requêtes à la base de données utilisent des méthodes qui préviennent l'injection SQL, telles que les requêtes préparées.
 
 ---
 
@@ -156,7 +156,6 @@ Permet à un attaquant d'injecter des requêtes SQL malveillantes qui peuvent li
 | **WordPress Core** | Contournement des permissions administratives (CVE-2019-17675) |
 | **Plugin wpDiscuz** | Injection de contenu non authentifiée (CVE-2023-46310) |
 | **Plugin wpDiscuz** | Faille d'autorisation permettant modification de contenu (CVE-2023-3998) |
-
 
 ## Explication des Risques et des Impacts
 
@@ -174,9 +173,9 @@ Un attaquant pourrait modifier le contenu du site sans être authentifié, affec
 
 ## Recommandations pour le Patching
 
-- **Mise à jour de WordPress et des plugins** : Assurez-vous que toutes les composantes du site sont à jour avec les dernières sécurités.
-- **Renforcement des politiques de contenu** : Utiliser des headers de sécurité comme Content-Security-Policy pour prévenir les XSS.
-- **Audit des permissions** : Réviser et restreindre les permissions pour s'assurer que seuls les utilisateurs nécessaires ont accès à des fonctionnalités sensibles.
+Mise à jour de WordPress et des plugins : Assurez-vous que toutes les composantes du site sont à jour avec les dernières sécurités.  
+Renforcement des politiques de contenu : Utiliser des headers de sécurité comme Content-Security-Policy pour prévenir les XSS.  
+Audit des permissions : Réviser et restreindre les permissions pour s'assurer que seuls les utilisateurs nécessaires ont accès à des fonctionnalités sensibles.
 
 ---
 
@@ -208,10 +207,10 @@ Les actions AJAX sans vérifications d'autorisation appropriées peuvent être e
 
 ## Recommandations pour le Patching
 
-- **Contrôle d'accès renforcé** : S'assurer que toutes les informations sensibles nécessitent une authentification appropriée.
-- **Validation et assainissement des entrées** : S'assurer que toutes les entrées, y compris les métadonnées, sont correctement validées et assainies pour prévenir l'injection.
-- **Sécurisation du cache** : Configurer correctement le cache pour prévenir l'empoisonnement et assurer que le contenu est servi uniquement aux utilisateurs autorisés.
-- **Audit des scripts AJAX** : Revoir toutes les fonctions AJAX pour s'assurer qu'elles implémentent des contrôles d'autorisation adéquats.
+Contrôle d'accès renforcé : S'assurer que toutes les informations sensibles nécessitent une authentification appropriée.  
+Validation et assainissement des entrées : S'assurer que toutes les entrées, y compris les métadonnées, sont correctement validées et assainies pour prévenir l'injection.  
+Sécurisation du cache : Configurer correctement le cache pour prévenir l'empoisonnement et assurer que le contenu est servi uniquement aux utilisateurs autorisés.  
+Audit des scripts AJAX : Revoir toutes les fonctions AJAX pour s'assurer qu'elles implémentent des contrôles d'autorisation adéquats.
 
 ---
 
