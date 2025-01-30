@@ -43,7 +43,7 @@
 ## 📝 Introduction
 
 ### 🎯 Objectif
-L'objectif de ce rapport est d'identifier et d'exploiter les vulnérabilités de la machine cible "Blogger".
+L'objectif de ce rapport est d'identifier et d'exploiter les vulnérabilités de la machine cible "Blogger", puis de proposer des solutions pour améliorer la sécurité de l'environnement testé.
 
 ### 🌍 Informations sur l'Environnement
 - **IP cible :** `192.168.1.4`
