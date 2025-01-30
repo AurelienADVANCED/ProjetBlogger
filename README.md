@@ -155,6 +155,7 @@ Après avoir identifié la vulnérabilité critique sur **wpDiscuz**, nous allon
 Dans le fichier `reverse.php`, nous ajoutons une signature GIF pour contourner les restrictions :
 
 ![image4](https://github.com/user-attachments/assets/6a7da93c-c14b-4139-a91b-6ba34dc72eac)
+![image1](https://github.com/user-attachments/assets/95a8c8ff-6529-41a0-b6f1-80a8ed5101c4)
 
 ### ⏳ Étape 2 : Lancement d’une Écoute sur Kali
 Nous démarrons un listener Netcat sur le port `4444` :
