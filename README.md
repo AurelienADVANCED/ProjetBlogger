@@ -21,7 +21,7 @@
    - 🏴 Utilisation de WPScan
 
 6. [🔴 Vulnérabilités Critiques](#-vulnérabilités-critiques)
-7. [⚠️ Vulnérabilités Élevées](#-vulnérabilités-élevées)
+7. [⚠️ Vulnérabilités Élevées](#-7-vulnerabilites-elevees)
 8. [🟠 Vulnérabilités Moyennes](#-vulnérabilités-moyennes)
 9. [🟡 Vulnérabilités Faibles](#-vulnérabilités-faibles)
 
@@ -32,11 +32,11 @@
     - 📤 Étape 3 : Upload du Fichier Malveillant
     - 🎉 Étape 4 : Prise de Contrôle
 
-11. [⚠️ Exploitation Potentielle et Risques](#-5-exploitation-potentielle-et-risques)
+11. [⚠️ Exploitation Potentielle et Risques](#-11-exploitation-potentielle-et-risques)
     - 🔑 Vulnérabilités Identifiées
     - 🚨 Risques et Conséquences
 
-12. [🛡️ Recommandations de Sécurité](#-6-recommandations-de-sécurité)
+12. [🛡️ Recommandations de Sécurité](#-12-recommandations-de-securite)
 
 ---
 
