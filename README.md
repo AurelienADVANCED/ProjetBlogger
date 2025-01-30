@@ -23,9 +23,10 @@
 L'objectif de ce rapport est d'identifier et d'exploiter les vulnérabilités de la machine cible "Blogger", puis de proposer des solutions pour améliorer la sécurité de l'environnement testé.
 
 ### 🌍 Informations sur l'Environnement
-- **IP cible :** `192.168.1.4`
-- **IP de la machine d'attaque :** `192.168.1.157`
-- **Outils utilisés :** `netdiscover`, `nmap`, `dirb`, `wpscan`
+
+**IP cible :** `192.168.1.4`  
+**IP de la machine d'attaque :** `192.168.1.157`  
+**Outils utilisés :** `netdiscover`, `nmap`, `dirb`, `wpscan`
 
 ### 🖼️ Schéma de l’Infrastructure
 Un aperçu de l’infrastructure actuelle est illustré ci-dessous :
@@ -65,8 +66,8 @@ nmap -sS -sC -sV -A -O -vvv 192.168.1.4
 | 80   | HTTP    | Apache/WordPress |
 
 On constate que **deux ports sont ouverts** : 
-- **Port 22 (SSH)** 
-- **Port 80 (HTTP)**
+**Port 22 (SSH)** 
+**Port 80 (HTTP)**
 
 Le **port 80** héberge un service web accessible via un navigateur.
 
@@ -90,8 +91,8 @@ dirb http://192.168.1.4
 ```
 
 **Résultats :**
-- **Répertoire découvert :** `/assets/fonts/blog`
-- Ce répertoire contient une instance **WordPress**.
+**Répertoire découvert :** `/assets/fonts/blog`
+Ce répertoire contient une instance **WordPress**.
 
 ![image10](https://github.com/user-attachments/assets/ef33f844-e003-4e48-b7d7-a1c3a7b7dc2c)
 
