@@ -229,34 +229,34 @@ Bien que de faible impact, ces vulnérabilités pourraient encore être utilisé
 | **WordPress Core** | Vulnérabilité XSS dans l'assainissement des URLs (CVE-2019-16222) |
 | **Plugin Akismet** | Version obsolète avec failles connues |
 
-**Explication des risques et des impacts** :
-- **XSS stocké** : Similaire aux vulnérabilités moyennes, le XSS stocké dans ces contextes pourrait être utilisé pour des attaques ciblées.
-- **Problèmes d'indexation** : Peut permettre à des attaquants de découvrir des informations sur les utilisateurs pendant les processus d'activation.
-- **Vulnérabilité XSS sur Apache** : Spécifique à l'environnement serveur, cette faille pourrait permettre l'exécution de scripts dans des contextes inattendus.
-- **Assainissement des URLs** : Manquements dans l'assainissement peuvent permettre des injections via des URLs mal formées.
+**Explication des risques et des impacts** :  
+**XSS stocké** : Similaire aux vulnérabilités moyennes, le XSS stocké dans ces contextes pourrait être utilisé pour des attaques ciblées.  
+**Problèmes d'indexation** : Peut permettre à des attaquants de découvrir des informations sur les utilisateurs pendant les processus d'activation.  
+**Vulnérabilité XSS sur Apache** : Spécifique à l'environnement serveur, cette faille pourrait permettre l'exécution de scripts dans des contextes inattendus.  
+**Assainissement des URLs** : Manquements dans l'assainissement peuvent permettre des injections via des URLs mal formées.
 
-### **Recommandations pour le patching** :
-- **Mise à jour des plugins et du noyau** : Comme pour les autres niveaux de vulnérabilité, la mise à jour est cruciale.
-- **Renforcement de l'assainissement des entrées** : Implémenter des contrôles stricts sur les données entrantes, spécialement dans les URLs et les liens.
-- **Audit des paramètres serveur** : Examiner et ajuster les configurations du serveur pour renforcer la sécurité contre les XSS.
+### **Recommandations pour le patching** :  
+**Mise à jour des plugins et du noyau** : Comme pour les autres niveaux de vulnérabilité, la mise à jour est cruciale.  
+**Renforcement de l'assainissement des entrées** : Implémenter des contrôles stricts sur les données entrantes, spécialement dans les URLs et les liens.  
+**Audit des paramètres serveur** : Examiner et ajuster les configurations du serveur pour renforcer la sécurité contre les XSS.
 
 ---
 
-## **Légende des niveaux de risque**
+## **Légende des niveaux de risque**  
 🔴 **Critique** : Peut compromettre entièrement le site.  
 ⚠️ **Élevé** : Risque de compromission sévère.  
 🟠 **Moyen** : Accès partiel aux données ou altération de contenu.  
-🟡 **Faible** : Moins d'impact, souvent exploitable avec des privilèges existants.  
+🟡 **Faible** : Moins d'impact, souvent exploitable avec des privilèges existants.
 
 ---
 
-🚀 **Actions recommandées :**
-- **Mettre à jour immédiatement** WordPress et ses plugins.
-- **Désactiver XML-RPC** pour éviter les attaques externes.
-- **Restreindre les permissions des fichiers et dossiers sensibles.**
-- **Appliquer un pare-feu WAF** pour bloquer les attaques XSS et injections SQL.
+🚀 **Actions recommandées** :  
+**Mettre à jour immédiatement** WordPress et ses plugins.  
+**Désactiver XML-RPC** pour éviter les attaques externes.  
+**Restreindre les permissions des fichiers et dossiers sensibles.**  
+**Appliquer un pare-feu WAF** pour bloquer les attaques XSS et injections SQL.
 
-📌 **Prochaine étape :** Effectuer un audit approfondi du serveur et des logs pour détecter toute compromission.
+📌 **Prochaine étape** : Effectuer un audit approfondi du serveur et des logs pour détecter toute compromission.
 
 ---
 
